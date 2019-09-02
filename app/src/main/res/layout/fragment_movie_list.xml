@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:fragment=".MovieListFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/searchBar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/appBackground"
+        android:padding="@dimen/image_common_padding"
+        >
+        <LinearLayout
+            android:id="@+id/apiBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="API Key:"/>
+
+            <EditText
+            android:id="@+id/apiKey"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/api_text"
+            android:gravity="center"
+            android:inputType="text"
+            android:text="ee1345c4"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" tools:targetApi="o"
+            ></EditText>
+
+
+            <TextView
+                android:layout_marginLeft="@dimen/image_common_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PageNo: "/>
+
+            <TextView
+                android:id="@+id/pageNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="0/0"/>
+
+        </LinearLayout>
+        <EditText
+            android:id="@+id/searchText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/min_text"
+            android:inputType="text"
+            android:layout_below="@+id/apiBar"
+            android:layout_toStartOf="@id/searchButton"
+            android:text="@string/search_term"
+            ><requestFocus /></EditText>
+
+
+        <ImageButton
+            android:id="@+id/searchButton"
+            android:src="@drawable/ic_search_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/search_button_desc"/>
+
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/movieViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchBar"
+        >
+    </androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>
