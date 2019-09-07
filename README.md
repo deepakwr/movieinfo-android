@@ -8,7 +8,7 @@ Built on Android Studio 3.5
 - Language - Kotlin
 - Third Party Libraries Used - Glide : https://github.com/bumptech/glide
 
-![](example/movieinfo.gif)
+![Alt Text](https://www.dropbox.com/s/cdhyslf8gf9vyyc/movieinfo.gif?raw=1)
 
 
 Features :
