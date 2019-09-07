@@ -10,7 +10,7 @@ Built on Android Studio 3.5
 
 Demo:
 
-<img src="https://www.dropbox.com/s/cdhyslf8gf9vyyc/movieinfo.gif?raw=1" width="250px">
+<img src="example/movieinfo.gif" width="220px">
 
 Features :
 
